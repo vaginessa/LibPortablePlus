@@ -1,211 +1,214 @@
+
+
 # LibPortablePlus
   
-[Скачать сборку Firefox_ESR.91.x.x.x32-64.(22.07.12)](https://github.com/wvxwxvw/LibPortablePlus/raw/main/Firefox_ESR.91.x.x.x32-64.(22.07.12).7z)  
-Также имеется преднастроенный профиль:  
-[Почитать](https://github.com/wvxwxvw/LibPortablePlus_Profiles/blob/main/README.md) | [Скачать](https://github.com/wvxwxvw/LibPortablePlus_Profiles/raw/main/Firefox.91.ESR.LPP.profile.220714.7z) | [Посмотреть с TST](https://github.com/wvxwxvw/LibPortablePlus_Profiles/blob/main/tstex-screen.md) | [Посмотреть без TST](https://github.com/wvxwxvw/LibPortablePlus_Profiles/blob/main/ntfex-screen.md)  
+[Build Firefox_ESR.91.xxx32-64.(22.07.12) herunterladen](https://github.com/wvxwxvw/LibPortablePlus/raw/main/Firefox_ESR.91.xxx32-64.(22.07.12).7z)  
+Es gibt auch ein vorkonfiguriertes Profil:  
+[Lesen](https://github.com/wvxwxvw/LibPortablePlus_Profiles/blob/main/README.md) | [Herunterladen](https://github.com/wvxwxvw/LibPortablePlus_Profiles/raw/main/Firefox.91.ESR.LPP.profile.220714.7z) | [Mit TST anzeigen](https://github.com/wvxwxvw/LibPortablePlus_Profiles/blob/main/tstex-screen.md) | [Ohne TST anzeigen](https://github.com/wvxwxvw/LibPortablePlus_Profiles/blob/main/ntfex-screen.md)  
   
-[Скачать сборку Firefox_ESR.102.x.x.x32-64.(22.10.03)](https://github.com/wvxwxvw/LibPortablePlus/raw/main/Firefox_ESR.102.x.x.x32-64.(22.10.03).7z) 
+[Build Firefox_ESR.102.xxx32-64.(10.22.03) herunterladen](https://github.com/wvxwxvw/LibPortablePlus/raw/main/Firefox_ESR.102.xxx32-64.(10.22.03).7z)
   
-## Портативная версия Firefox ESR (32-64)  
+## Tragbarer Firefox ESR (32-64)  
   
-* Условная портативность обеспечивается portable*.dll  
-* Несколько вариантов файлов настроек  
-* Несколько способов очистки следов работы  
-* Метод резервного копирования  
-* Встроен загрузчик скриптов - user_chrome_files  
-* и т.д.  
+* Bedingte Portabilität durch portable*.dll  
+* Mehrere Optionen für Einstellungsdateien  
+* Mehrere Möglichkeiten, Arbeitsspuren zu beseitigen  
+* Sicherungsmethode  
+* Integrierter Skript-Loader – user_chrome_files  
+* usw.  
   
   
-## Общее описание:  
+## Allgemeine Beschreibung:  
   
-#### • В папке будущего профиля присутствуют:  
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пара заглушек:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Нужны для гарантии предотвращения создания мусорных папок  
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;search.json.mozlz4:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Добавляет несколько поисковиков, в том числе забаненные  
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prefs.js:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Включает поддержку скриптов и выводит на панель кнопку скрипта  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  быстрого переключения параметров about:config  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Преднастраивает несколько параметров имеющихся в кнопке  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Преднастраивает отображение поисковиков, изменяется в настройках  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Закрепляет в топах ссылки на две альтернативные новые вкладки  
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user.js:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Основной файл настроек будущего профиля сборки  
+#### • Zukünftiger Profilordner enthält:  
+##### Steckerpaar:  
+         Wird benötigt, um sicherzustellen, dass keine Papierkorbordner erstellt werden  
+##### search.json.mozlz4:  
+         · Fügt mehrere Suchmaschinen hinzu, darunter auch verbotene  
+#####prefs.js:  
+         Aktiviert die Skriptunterstützung und zeigt eine Skriptschaltfläche im Bedienfeld an  
+            Schnelles Umschalten der about:config-Parameter  
+         · Stellt mehrere in der Schaltfläche verfügbare Parameter vor  
+         · Voreingestellte Anzeige von Suchmaschinen, Änderungen in den Einstellungen  
+         Pinnt Top-Links zu zwei alternativen neuen Tabs  
+#####user.js:  
+         Die Hauptkonfigurationsdatei des zukünftigen Build-Profils  
 
-#### • В папке ядра присутствует:  
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Файлы настроек  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Включают возможность установки скриптов и стилей user_chrome_files  
+#### • Der Kernel-Ordner enthält:  
+##### Einstellungsdateien  
+         · Integrieren Sie die Möglichkeit, Skripte und Stile in user_chrome_files zu installieren  
   
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Файл политик  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Отключает: телеметрию, CaptivePortal, сервисы Mozilla, GMP, CDM,  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  возможность установки обоев, страницы первого запуска, PostUpdatePage,  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  создание для нового профиля папок закладок по умолчанию  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· Отключает автообновление: браузера, расширений, поисковых систем,  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  системных расширений
+##### Richtliniendatei  
+         Deaktiviert: Telemetrie, CaptivePortal, Mozilla Services, GMP, CDM,  
+            Möglichkeit, Hintergrundbild, erste Ausführungsseite, PostUpdatePage festzulegen,  
+            Erstellen Sie Standard-Lesezeichenordner für ein neues Profil  
+         Deaktiviert die automatische Aktualisierung: Browser, Erweiterungen, Suchmaschinen,  
+            Systemerweiterungen
   
-#### • Временные файлы пишутся в %TEMP%  
-#### • Добавлен скрипт очистки ядра, профиля и временных файлов (ручной запуск)  
-#### • Добавлен способ быстрого бэкапа профиля или выбранных папок/файлов  
-#### • Firefox Accounts, Pocket и Service workers отключены, но легко включаются  
-#### • Другие компоненты и более подробные описания есть в папке maintenance  
+#### • Temporäre Dateien werden nach %TEMP% geschrieben  
+#### • Skript zum Bereinigen von Kernel-, Profil- und temporären Dateien hinzugefügt (manueller Start)  
+#### • Es wurde eine Möglichkeit hinzugefügt, ein Profil oder ausgewählte Ordner/Dateien schnell zu sichern  
+#### • Firefox-Konten, Pocket- und Service-Worker deaktiviert, aber einfach zu aktivieren  
+#### • Weitere Komponenten und detailliertere Beschreibungen finden Sie im Wartungsordner  
   
   
-## Корень сборки:  
+## Assembly-Stamm:  
   
-```csharp
-    Папка maintenance
-        Дополнительные компоненты и описания к ним
-        Описание сборки
-        Папка maintenance/7z
-            Компоненты архиватора
-        Папка maintenance/SQLite
-            Утилита сжатия баз *.sqlite
+„scharf
+    Wartungsordner
+        Zusätzliche Komponenten und Beschreibungen dazu
+        Build-Beschreibung
+        Ordner „Maintenance/7z“.
+            Archiver-Komponenten
+        Maintenance/SQLite-Ordner
+            *.SQLite-Dienstprogramm zur Datenbankkomprimierung
     _include.txt
-        Список резервного копирования, можно редактировать
-            В нем добавлен пример выборки из подпапок
+        Backup-Liste, kann bearbeitet werden
+            Es wurde ein Beispiel für die Auswahl aus Unterordnern hinzugefügt
     FF-102esr-Cleaner.exe
-        Очищает мусор профиля, ядра, временную папку и некоторые другие места.
-        Папку bookmarkbackups тоже удаляет, она просто не нужна при постоянных
-        полных бэкапах профиля. При запуске завершает все процессы Firefox.
-        Исходники в maintenance, можете перекомпилировать по своему в Aut2Exe,
-        который входит в комплект AutoIt.
+        Bereinigt Profilmüll, Kernel, temporäre Ordner und einige andere Orte.
+        Der Ordner „bookmarkbackups“ wird ebenfalls gelöscht, er wird bei Konstante einfach nicht benötigt
+        Vollständige Profilsicherungen. Beendet beim Start alle Firefox-Prozesse.
+        Quellen in Wartung können Sie in Aut2Exe auf Ihre eigene Weise neu kompilieren,
+        welches in AutoIt enthalten ist.
     Firefox 102esr RUN.lnk
-        Ярлык для запуска firefox.exe из папки core
-    VACUUM-.bat
-        Жмет все .sqlite в профиле и его подпапках
-        Может удалять базы рекламорезок и историю отдельных расширений
-            Описание в нем самом и в maintenance\sources\bat
-            Требует наличия рядом папки maintenance\SQLite
+        Verknüpfung zum Ausführen von firefox.exe aus dem Kernordner
+    VAKUUM-.bat
+        Presst alle .sqlite im Profil und seinen Unterordnern
+        Kann Ad-Cutter-Basen und den Verlauf einzelner Erweiterungen löschen
+            Beschreibung an sich und in Maintenance\sources\bat
+            Erfordert einen Ordner „wartung\SQLite“ in der Nähe
     xBACKUP.bat
-        Создает архив по списку из _include.txt
-            Пароль на архив 12345, меняется в самом батнике
-            Требует наличия рядом папки maintenance\7z
-```
+        Erstellt ein Archiv gemäß der Liste aus _include.txt
+            Das Passwort für das Archiv lautet 12345, es ändert sich in der Batchdatei selbst
+            Erfordert einen Ordner „wartung\7z“ in der Nähe
+„
   
   
-## Подготовка к использованию (и обновление сборки):  
-```csharp
-    • Скачать нужную версию желаемой разрядности, например,
-      с https://ftp.mozilla.org/pub/firefox/releases/
-    • Открыть дистрибутив Firefox с помощью 7-zip или WinRAR.
-    • Перетащить папку "core" из дистрибутива в корень папки со сборкой,
-      согласится на перезапись файлов.
-    • Открыть "dependentlibs.list" альтернативным блокнотом и первой строкой
-      прописать portable32.dll или portable64.dll (в зависимости от разрядности).
-    • Запустить FF-102esr-Cleaner.exe, для очистки мусора дистрибутива.
-```
+## Vorbereiten für den Einsatz (und Aktualisieren der Baugruppe):  
+„scharf
+    • Laden Sie die erforderliche Version der gewünschten Bittiefe herunter, z. B.
+      von https://ftp.mozilla.org/pub/firefox/releases/
+    • Öffnen Sie die Firefox-Distribution mit 7-zip oder WinRAR.
+    • Ziehen Sie den Ordner „core“ aus der Distribution in das Stammverzeichnis des Ordners mit der Assembly,
+      stimmen Sie dem Überschreiben von Dateien zu.
+    • Öffnen Sie „dependentlibs.list“ mit dem alternativen Editor und der ersten Zeile
+      schreiben Sie portable32.dll oder portable64.dll vor (abhängig von der Bittiefe).
+    • Führen Sie FF-102esr-Cleaner.exe aus, um den Müll der Distribution zu bereinigen.
+„
   
   
-## Как начать пользоваться:  
+## So beginnen Sie mit der Verwendung:  
   
-```csharp
-    1. Для создания нового профиля  
-        • Запускаем core/firefox.exe или ярлык "Firefox 102esr RUN.lnk"  
-        • Пользуемся  
+„scharf
+    1. Um ein neues Profil zu erstellen  
+        • Führen Sie core/firefox.exe oder die Verknüpfung „Firefox 102esr RUN.lnk“ aus.  
+        • Wir gebrauchen  
       
-    2. Для использования своего старого профиля  
-        • Кидаем файлы и папки из своего профиля в "profile"  
-            · От замены отказываемся, ошибки игнорируем, жмем "Пропустить"  
-            · Предварительно можно почитать ниже "Перенос старого профиля"  
-        • Запускаем FF-102esr-Cleaner.exe, ждем несколько секунд  
-        • Запускаем core/firefox.exe или ярлык "Firefox 102esr RUN.lnk"  
-        • Пользуемся  
-```
+    2. Um Ihr altes Profil zu verwenden  
+        • Wir werfen Dateien und Ordner von unserem Profil nach „Profil“  
+            Wir weigern uns zu ersetzen, ignorieren Fehler, klicken Sie auf „Überspringen“  
+            Weiter unten können Sie „Übernahme des alten Profils“ vorlesen.  
+        • Führen Sie FF-102esr-Cleaner.exe aus und warten Sie einige Sekunden  
+        • Führen Sie core/firefox.exe oder die Verknüpfung „Firefox 102esr RUN.lnk“ aus.  
+        • Wir gebrauchen  
+„
   
-        !   На боковой панели вы обнаружите синюю кнопку, прочтите ее подсказку.  
+        ! In der Seitenleiste finden Sie eine blaue Schaltfläche. Lesen Sie den entsprechenden Hinweis.  
   
-        !!  Если расширения из старого профиля потеряют настройки, удалите  
-            addonStartup.json.lz4 в профиле и два раза перезапустите браузер  
-            При первом запуске, создается новый кэш загрузки расширений, а при  
-            втором запуске, расширения стартуют уже с новым кэшем. Настройки  
-            расширений при этом восстанавливаются.  
+        !! Wenn Erweiterungen aus dem alten Profil ihre Einstellungen verlieren, entfernen Sie sie  
+            addonStartup.json.lz4 im Profil und starten Sie den Browser zweimal neu  
+            Bei der ersten Ausführung wird ein neuer Erweiterungsladecache erstellt und so weiter  
+            Beim zweiten Start beginnen die Erweiterungen mit dem neuen Cache. Einstellungen  
+            Erweiterungen werden wiederhergestellt.  
   
-        !!! Желательно сразу установить альтернативу домашней странице,
-            что-то свое или, например, рекомендуемые Mozilla:
-            https://addons.mozilla.org/ru/firefox/addon/tabliss/
-            https://addons.mozilla.org/ru/firefox/addon/new-tab-override/
-            Не вся телеметрия и сетевые соединения домашней страницы по умолчанию
-            отключаются файлами конфигурации, поэтому идеальное решение -
-            не использовать и не открывать ее.
+        !!! Es empfiehlt sich, gleich eine Alternative zur Homepage zu installieren,
+            etwas Eigenes oder zum Beispiel von Mozilla empfohlenes:
+            https://addons.mozilla.org/en/firefox/addon/tabliss/
+            https://addons.mozilla.org/en/firefox/addon/new-tab-override/
+            Nicht alle Telemetrie- und Netzwerkverbindungen der Standard-Startseite
+            werden durch Konfigurationsdateien deaktiviert, daher ist die ideale Lösung
+            Benutzen oder öffnen Sie es nicht.
   
-## Перенос старого профиля  
+## Altes Profil migrieren  
   
-Вы можете использовать старый профиль целиком.  
-Но я настоятельно не рекомендую тащить весь хлам, возьмите только нужное  
-и понятное вам.  
+Sie können das gesamte alte Profil verwenden.  
+Aber ich empfehle dringend nicht, den ganzen Müll wegzuschleppen, sondern nur das mitzunehmen, was Sie brauchen  
+und für Sie verständlich.  
   
-В идеале, можно взять только эти:  
-```csharp
-    · favicons.sqlite - иконки закладок и журнала посещений
-    · key*.db - ключ шифрования паролей (актуален с большей цифрой)
-    · logins.json - сохраненные пароли
-    · persdict.dat - слова исключения, добавленные вами в словарь
-    · places.sqlite - закладки и журнал посещений
-    · search.json.mozlz4 - ваши поисковые системы (если меняли), но
-      ваш старый файл может быть перезаписан Firefox, если в нем нет
-      поисковых систем Firefox по умолчанию для этой версии.
-```
+Idealerweise können Sie nur diese einnehmen:  
+„scharf
+    favicons.sqlite – Symbole für Lesezeichen und Browserverlauf
+    key*.db – Passwortverschlüsselungsschlüssel (relevant bei einer größeren Zahl)
+    logins.json – gespeicherte Passwörter
+    persdict.dat – Ausschlusswörter, die Sie dem Wörterbuch hinzugefügt haben
+    places.sqlite – Lesezeichen und Browserverlauf
+    search.json.mozlz4 – Ihre Suchmaschinen (falls geändert), aber
+      Ihre alte Datei wird möglicherweise von Firefox überschrieben, wenn dies nicht der Fall ist
+      Standard-Firefox-Suchmaschinen für diese Version.
+„
   
-Ни в коем случае не следует тащить в новый профиль старый pref.js,  
-а user.js необходимо тщательно инвентаризировать.  
-Параметры меняются между версиями Firefox и старые настройки могут  
-работать по другому в новой версии.  
+Auf keinen Fall sollten Sie die alten pref.js in das neue Profil ziehen,  
+und user.js müssen sorgfältig inventarisiert werden.  
+Die Optionen können sich zwischen Firefox-Versionen und älteren Einstellungen ändern  
+funktionieren in der neuen Version anders.  
   
-Залог стабильной работы браузера - периодическая пересборка профиля  
+Der Schlüssel zu einem stabilen Browserbetrieb ist die regelmäßige Neuerstellung des Profils  
   
-<a href="https://support.mozilla.org/ru/kb/profili-gde-firefox-hranit-vashi-zakladki-paroli-i" target="_blank">Статейка о файлах профиля на support.mozilla.org ru</a>  
+Artikel zu Profildateien unter support.mozilla.org en  
   
   
-## Резервное копирование профиля (бэкап):  
+## Profilsicherung (Sicherung):  
   
-```csharp
-    Запускаете xBACKUP.bat, получаете архив с резервной копией
-    (пароль на архив 12345, изменяется в батнике).
-    Перед бэкапом можно запустить VACUUM-.bat, предварительно ознакомившись
-    с его содержимым, кодировка "Кириллица OEM 866" (по другому DOS/OEM) и
-    отредактировав под себя.
-```
+„scharf
+    Führen Sie xBACKUP.bat aus und holen Sie sich ein Backup-Archiv
+    (Das Passwort für das Archiv ist 12345, Änderungen in der Batchdatei).
+    Vor dem Backup können Sie VACUUM-.bat ausführen, nachdem Sie es zuvor gelesen haben
+    mit seinem Inhalt, Kodierung „Cyrillic OEM 866“ (sonst DOS/OEM) und
+    für mich selbst bearbeitet.
+„
  
   
   
-## Очистка сборки:  
+## Baugruppenbereinigung:  
   
-```csharp
-    После обновления, после работы на чужой машине и просто для
-    периодической очистки, можно воспользоваться FF-102esr-Cleaner.exe,
-    он чистит папку ядра, профиля, ProgramData, LocalLow, %TEMP%.
-    НЕ чистит: закладки, историю, пароли, куки/хранилище/сессии и историю форм,
-    очистка этих позиций при закрытии браузера настраивается в 2811 секцииu user.js,
-    а включается в синей кнопке на боковой панели или в 2810 секции user.js.
-```
+„scharf
+    Nach dem Update, nach der Arbeit an der Maschine eines anderen und einfach für
+    Für die regelmäßige Reinigung können Sie FF-102esr-Cleaner.exe verwenden.
+    Es bereinigt den Ordner Kernel, Profil, ProgramData, LocalLow und %TEMP%.
+    Bereinigt NICHT: Lesezeichen, Verlauf, Passwörter, Cookies/Speicher/Sitzungen und Formularverlauf,
+    Das Löschen dieser Positionen beim Schließen des Browsers wird in Abschnitt 2811 von user.js konfiguriert.
+    aber es ist in der blauen Schaltfläche in der Seitenleiste oder im Abschnitt 2810 user.js enthalten.
+„
 
   
   
-## Полезные ссылки:  
+## Nützliche Links:  
   
-<a href="https://github.com/stonecrusher/simpleMenuWizard" target="_blank">simpleMenuWizard</a>  
-стили userChrome/userContent для редактирования всех контекстных меню  
-Firefox, от автора старого расширения Simple Menu Wizard  
+simpleMenuWizard  
+userChrome/userContent-Stile zum Bearbeiten aller Kontextmenüs  
+Firefox, vom Autor der alten Simple Menu Wizard-Erweiterung  
   
-<a href="https://github.com/black7375/Firefox-UI-Fix" target="_blank">Firefox-UI-Fix</a>  
-несколько комплектов стилей для ликвидации последствий Proton  
-<a href="https://github.com/Aris-t2/CustomCSSforFx" target="_blank">Classic CSS tweaks for Firefox Quantum</a>  
-стили userChrome/userContent, от автора старого ClassicThemeRestorer  
-<a href="https://www.userchrome.org/megabar-styling-firefox-address-bar.html" target="_blank">Megabar – Configuring and Styling</a>  
-генератор стилей для мегабара (адресной строки)  
+Firefox-UI-Fix  
+Mehrere Bausätze für die Protoneneliminierung  
+Klassische CSS-Optimierungen für Firefox Quantum  
+userChrome/userContent-Stile, vom Autor des alten ClassicThemeRestorer  
+Megabar – Konfigurieren und Stylen  
+Stilgenerator für Megabar (Adressleiste)  
   
-<a href="https://github.com/arkenfox/user.js" target="_blank">arkenfox user.js</a>  
-справочник по параметрам для составления собственного user.js,  
-для разных версий Firefox (приватность и безапасность)  
-<a href="https://github.com/mozilla/policy-templates" target="_blank">Policy Templates for Firefox </a>  
-шаблоны политик для Firefox  
+arkenfox user.js  
+Parameterreferenz zum Kompilieren Ihrer eigenen user.js,  
+für verschiedene Versionen von Firefox (Datenschutz und Sicherheit)  
+Richtlinienvorlagen für Firefox  
+Richtlinienvorlagen für Firefox  
   
-## Used developments & credits:  
+## Verwendete Entwicklungen & Credits:  
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.mozilla.org/ru/" target="_blank">mozilla</a>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://forum.mozilla-russia.org/" target="_blank">mozilla-russia.org</a>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://sourceforge.net/projects/libportable/" target="_blank">libportable</a>   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/arkenfox/user.js" target="_blank">arkenfox</a>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/VitaliyVstyle/VitaliyVstyle.github.io" target="_blank">VitaliyVstyle</a>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.7-zip.org/" target="_blank">7-zip</a>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.sqlite.org/index.html" target="_blank">sqlite</a>  
+      mozilla   
+      mozilla-russia.org   
+      libportable    
+      arkenfox   
+      VitaliyVstyle   
+      7-zip   
+      sqlite  
+
